@@ -21,6 +21,8 @@ class EtherDataSource extends RESTDataSource {
       `?module=stats&action=ethsupply&apikey=${process.env.ETHERSCAN_API}`
     );
   }
+
+  //Paste Code Here For New API Endpoints
 }
 
 module.exports = EtherDataSource;
