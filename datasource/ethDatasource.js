@@ -11,17 +11,15 @@ class EtherDataSource extends RESTDataSource {
   }
 
   async etherBalanceByAddress() {
-    return this
-      .get
-      //Insert API Endpoint - For Get Ether Balance for a Single Address
-      ();
+    return this.get(
+      `?module=account&action=balance&address=${eth_address}&tag=latest&apikey=${process.env.ETHERSCAN_API}`
+    );
   }
 
   async totalSupplyOfEther() {
-    return this
-      .get
-      //Insert API Endpoint - For Get Total Supply of Ether
-      ();
+    return this.get(
+      `?module=stats&action=ethsupply&apikey=${process.env.ETHERSCAN_API}`
+    );
   }
 }
 
