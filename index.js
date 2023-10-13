@@ -11,6 +11,7 @@ const resolvers = {
       dataSources.ethDataSource.etherBalanceByAddress(),
     getTotalSupplyEth: (root, _args, { dataSources }) =>
       dataSources.ethDataSource.totalSupplyOfEther(),
+    //Paste Code for New Resolver Functions
   },
 };
 
